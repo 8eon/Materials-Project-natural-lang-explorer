@@ -15,6 +15,10 @@ Leveraging Gemini's massive context window, the explorer passes raw data directl
 - **Granular Control**: Gemini requests specific data modules (Thermodynamics, Electronic, etc.) as needed, ensuring it has the exact raw data required for its reasoning.
 - **Privacy-First**: Designed for users to provide their own Google AI Studio and Materials Project API keys at runtime.
 
+## Documentation
+
+- **[PLANNING.md](./PLANNING.md)**: Detailed technical architecture, tool definitions, and roadmap.
+
 ## Tech Stack
 
 - **Language**: Python 3.10+
