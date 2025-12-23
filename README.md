@@ -4,22 +4,23 @@ An intelligent interface for the [Materials Project](https://materialsproject.or
 
 ## Overview
 
-The **Materials Project Natural Language Explorer** aims to bridge the gap between complex materials science data and intuitive human inquiry. By wrapping the Materials Project API (`mp-api`) into a set of MCP tools, we enable LLMs like **Gemma 3** to act as a domain-expert assistant that can not only fetch data but also explain concepts, hypothesize on material properties, and guide researchers through the vast chemical space.
+The **Materials Project Natural Language Explorer** aims to bridge the gap between complex materials science data and intuitive human inquiry. By giving **Gemini Flash** direct access to the Materials Project API (`mp-api`) via an extensive suite of functions, we enable a collaborative, expert-level chat experience. 
+
+Leveraging Gemini's massive context window, the explorer passes raw data directly to the model, ensuring **data integrity, completeness, and expert-level synthesis** without the risks of over-summarization.
 
 ## Key Features
 
-- **Natural Language Querying**: No more complex JSON filters or API documentation deep-dives. Ask "Find me stable perovskites with a bandgap between 1.5 and 2.0 eV."
-- **MCP Tool Integration**: Built using the Model Context Protocol, allowing Gemma 3 to seamlessly call Materials Project functions as native tools.
-- **Expert Context**: Leverages Gemma 3's internal knowledge to explain *why* certain results are significant or what specific material properties (like "Fermi level" or "space group") mean in context.
-- **Structured Insights**: Combines raw data from MPRest with synthesized explanations.
+- **Collaborative AI Researcher**: Gemini Flash acts as a partner, using its world knowledge to explain concepts and the Materials Project API to verify facts.
+- **High-Fidelity Data**: Utilizes Gemini's 1M+ token context window to process complete API responses, maintaining scientific accuracy. No summaries used.
+- **Granular Control**: Gemini requests specific data modules (Thermodynamics, Electronic, etc.) as needed, ensuring it has the exact raw data required for its reasoning.
+- **Privacy-First**: Designed for users to provide their own Google AI Studio and Materials Project API keys at runtime.
 
 ## Tech Stack
 
 - **Language**: Python 3.10+
-- **Materials Data**: [mp-api](https://github.com/materialsproject/api) (Materials Project)
-- **LLM**: Gemma 3 (via API)
-- **Protocol**: [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
-- **Orchestration**: Python-based MCP server
+- **Materials Data**: [mp-api](https://github.com/materialsproject/api)
+- **LLM**: Gemini Flash (via Google AI Studio)
+- **UI**: TUI (Terminal User Interface) using `rich` or `textual`
 
 ## Roadmap
 
