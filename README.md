@@ -23,7 +23,7 @@ Leveraging Gemini's massive context window, the explorer passes raw data directl
 
 - **Language**: Python 3.10+
 - **Materials Data**: [mp-api](https://github.com/materialsproject/api)
-- **LLM**: Gemini Flash (via Google AI Studio)
+- **LLM**: Gemini 3 Flash (via Google AI Studio)
 - **UI**: TUI (Terminal User Interface) using `rich` or `textual`
 
 ## Roadmap

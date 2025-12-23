@@ -6,7 +6,7 @@ This document outlines the architecture, data strategy, and implementation roadm
 A TUI-based collaborative environment where a researcher interacts with Gemini Flash. The model has direct, granular access to the Materials Project database to inform its chemistry reasoning with high-fidelity, raw data.
 
 ## 2. Tech Stack
-- **LLM**: Gemini 1.5 Flash (via Google AI Studio API). Chosen for its 1M+ token context window.
+- **LLM**: Gemini 3 Flash (via Google AI Studio API).
 - **Data Source**: Materials Project API (`mp-api`).
 - **Interface**: Python-based TUI (Terminal User Interface) using `rich` for styling and potentially `textual` for layout management.
 - **Environment**: Python 3.10+, managed via `pyproject.toml` or `requirements.txt`.
