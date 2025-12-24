@@ -128,7 +128,7 @@ Once installed, launch the explorer by typing:
 mp-explorer
 ```
 
-The program will ask you to paste your API keys. It only keeps these keys in its active memory while it's running; they are never saved to your files. To stop the program at any time, type `exit`.
+The program will ask you to paste your API keys. It only keeps these keys in its active memory while it's running; they are never saved to your files. To stop the program at any time, type `exit` or `control + c`.
 
 ---
 
