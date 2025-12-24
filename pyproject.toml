@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "materials-project-explorer"
-version = "1.0.0"
+version = "1.0.0-preview"
 authors = [
   { name="Gabriel", email="your.email@example.com" },
 ]

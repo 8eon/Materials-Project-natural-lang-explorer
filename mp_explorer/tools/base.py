@@ -14,8 +14,10 @@ class MPBase:
         self.last_call_time = 0
 
     def record_call(self, action_name: str):
-        """Increments the call counter and updates the current action."""
+        """Increments the call counter and updates the current action with a small delay."""
         self.call_count += 1
         self.current_action = action_name
         self.last_call_time = time.time()
+        # Small delay to respect Gemini API rate limits (Free Tier)
+        time.sleep(1.5)
 

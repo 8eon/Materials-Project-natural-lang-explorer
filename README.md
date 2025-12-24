@@ -115,15 +115,14 @@ You will need two free keys to power the agent:
 - **Google AI Studio Key**: Get this at [aistudio.google.com](https://aistudio.google.com/) to provide the "brain" (Gemini 3).
 - **Materials Project Key**: Get this at [materialsproject.org](https://next-gen.materialsproject.org/api) to provide the data.
 
-### 2. Automatic Installation
-Open your terminal (Command Prompt, PowerShell, or Terminal.app) and run this single command. It will download the code, move into the folder, and install everything automatically:
+### 2. Setup and Execution
+Open your terminal and run this single command to install the explorer directly from GitHub:
 
 ```bash
-git clone https://github.com/8eon/Materials-Project-natural-lang-explorer.git && cd Materials-Project-natural-lang-explorer && pip install .
+pip install git+https://github.com/8eon/Materials-Project-natural-lang-explorer.git
 ```
 
-### 3. Starting the Explorer
-Once the command above finishes, you can start the program by simply typing:
+Once installed, launch the explorer by typing:
 
 ```bash
 mp-explorer
