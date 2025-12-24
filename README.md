@@ -116,7 +116,7 @@ The system is composed of discrete modules that the agent invokes dynamically ba
 ### 2. Setup
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/Materials-Project-Explorer.git
+git clone https://github.com/8eon/Materials-Project-natural-lang-explorer.git
 cd Materials-Project-Explorer
 
 # Install the package and dependencies
