@@ -10,7 +10,7 @@ Built with **Python**, the **Materials Project API (mp-api)**, and **Gemini 3 Fl
 
 The explorer enables a high-fidelity collaboration where the AI acts as a domain-expert partner. Below is a transcript of a real-world interaction demonstrating the agent's ability to orchestrate multiple API calls to synthesize a complex material profile.
 
-### **Query**: *"Compare the cubic and tetragonal phases of SrTiO3."*
+### *Real use example*
 
 > **User**: *"Find SrTiO3 and tell me its stability and bandgap."*
 >
