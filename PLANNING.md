@@ -53,17 +53,17 @@ Each function takes a `material_id` and returns the complete raw JSON for that s
 ```
 
 ## 7. Implementation Roadmap
-1. **Phase 1: Foundation**
-   - Initialize Python environment.
-   - Implement `config.py` for runtime key entry.
-   - Set up basic `mp-api` connection.
-2. **Phase 2: The Core Tools**
-   - Implement the `find_materials` and `get_thermo_data` functions.
-   - Test raw JSON output to Gemini context.
-3. **Phase 3: TUI Development**
-   - Build the main chat loop using `rich`.
-   - Implement real-time tool execution feedback.
-4. **Phase 4: Expansion**
-   - Add remaining data modules (Electronic, Structure, etc.).
-   - Refine system prompts for better scientific collaboration.
+1. **Phase 1: Foundation (COMPLETED)**
+   - Initialized Python environment.
+   - Implemented `config.py` for runtime key entry.
+   - Established Gemini 3 Flash Preview connection with 1M context.
+2. **Phase 2: Modular Toolset (IN PROGRESS)**
+   - [x] Discovery & Thermodynamics modules.
+   - [x] Electronic Structure & Magnetic modules.
+   - [x] Crystal Structure module.
+   - [ ] Surface & Elastic properties.
+3. **Phase 3: TUI Polishing & UX**
+   - [ ] Suppress API progress bars for cleaner chat.
+   - [ ] Implement Rich Panels/Layouts for structured data.
+   - [ ] Add session logging.
 
