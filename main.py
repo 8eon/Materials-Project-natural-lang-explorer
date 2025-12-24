@@ -16,12 +16,12 @@ def create_status_display(mp_client):
     
     if mp_client.call_count > 0 and time_since_last_call < 2.0:
         return Text.assemble(
-            (f" 📂 Accessing {mp_client.current_action} ", "bold yellow"),
+            (f" Accessing {mp_client.current_action} ", "bold yellow"),
             (f"({mp_client.call_count})", "dim cyan")
         )
     
     # Default state is 'thinking'
-    return Text(" ⌛ Gemini is thinking...", style="italic cyan")
+    return Text(" Gemini is thinking...", style="italic cyan")
 
 def main():
     # 1. Setup Keys
