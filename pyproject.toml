@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "materials-project-explorer"
+version = "1.0.0"
+authors = [
+  { name="Gabriel", email="your.email@example.com" },
+]
+description = "An advanced, research-oriented TUI for autonomous materials discovery and analysis using Gemini 3."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "mp-api",
+    "google-generativeai",
+    "rich",
+    "python-dotenv",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/8eon/Materials-Project-natural-lang-explorer"
+"Bug Tracker" = "https://github.com/8eon/Materials-Project-natural-lang-explorer/issues"
+
+[project.scripts]
+mp-explorer = "main:main"
+
