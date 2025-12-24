@@ -1,6 +1,6 @@
-from config import config
-from tools import MPClient
-from llm.gemini_client import GeminiClient
+from .config import config
+from .tools import MPClient
+from .llm.gemini_client import GeminiClient
 import time
 from rich.console import Console
 from rich.markdown import Markdown

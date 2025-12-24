@@ -30,5 +30,5 @@ dependencies = [
 "Bug Tracker" = "https://github.com/8eon/Materials-Project-natural-lang-explorer/issues"
 
 [project.scripts]
-mp-explorer = "main:main"
+mp-explorer = "mp_explorer.main:main"
 

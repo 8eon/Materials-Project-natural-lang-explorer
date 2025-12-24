@@ -14,7 +14,7 @@ The explorer serves as a domain-expert collaborator, capable of orchestrating mu
 
 ```bash
 You: Compare the crystal structure and bandgap of SrTiO3 and BaTiO3.
- ⌛ Gemini is thinking...
+Gemini is thinking...
 
 Gemini:
 SrTiO3 (Strontium Titanate) and BaTiO3 (Barium Titanate) are both archetypal    
@@ -106,40 +106,30 @@ The system is composed of discrete modules that the agent invokes dynamically ba
 
 ---
 
-## Installation and Deployment
+## Installation and Setup
 
-### 1. Prerequisites
-- **Python 3.10+**
-- **Google AI Studio API Key** (Available at [aistudio.google.com](https://aistudio.google.com/))
-- **Materials Project API Key** (Available at [materialsproject.org](https://next-gen.materialsproject.org/api))
+To use the explorer, you will need to copy the project to your computer and install its requirements. This process requires **Python 3.10** or higher.
 
-### 2. Setup
+### 1. Get Your API Keys
+You will need two free keys to power the agent:
+- **Google AI Studio Key**: Get this at [aistudio.google.com](https://aistudio.google.com/) to provide the "brain" (Gemini 3).
+- **Materials Project Key**: Get this at [materialsproject.org](https://next-gen.materialsproject.org/api) to provide the data.
+
+### 2. Automatic Installation
+Open your terminal (Command Prompt, PowerShell, or Terminal.app) and run this single command. It will download the code, move into the folder, and install everything automatically:
+
 ```bash
-# Clone the repository
-git clone https://github.com/8eon/Materials-Project-natural-lang-explorer.git
-cd Materials-Project-Explorer
-
-# Install the package and dependencies
-pip install .
+git clone https://github.com/8eon/Materials-Project-natural-lang-explorer.git && cd Materials-Project-natural-lang-explorer && pip install .
 ```
 
-### 3. Execution
-The explorer can be launched via the command line. The system will prompt for necessary API credentials at startup; these keys are stored only in volatile memory for the duration of the session.
+### 3. Starting the Explorer
+Once the command above finishes, you can start the program by simply typing:
 
 ```bash
 mp-explorer
 ```
 
----
-
-## Usage Guidelines and Commands
-
-| Requirement | Description / Command |
-| :--- | :--- |
-| **Credential Automation** | Set `GOOGLE_API_KEY` and `MP_API_KEY` environment variables to bypass startup prompts. |
-| **Termination** | Input `exit` or `quit` to terminate the session. |
-| **Search Syntax** | Use elemental symbols for chemical system searches (e.g., "Find materials with Li, Fe, and P"). |
-| **Property Comparison** | Request comparative analysis between multiple Material IDs (e.g., "Compare mp-149 and mp-19017"). |
+The program will ask you to paste your API keys. It only keeps these keys in its active memory while it's running; they are never saved to your files. To stop the program at any time, type `exit`.
 
 ---
 
@@ -152,14 +142,14 @@ All material properties retrieved via this tool are derived from **Density Funct
 In instances where specific property data is unavailable in the Materials Project database, the model may utilize its internal training data. Users are encouraged to cross-reference LLM-synthesized insights with peer-reviewed literature and explicitly request API verification for critical research data.
 
 ### 3. API Rate Limiting
-This application utilizes the Google Gemini and Materials Project APIs. Usage is subject to the respective service tier limits (e.g., the Gemini 3 Flash free tier currently allows **15 requests per minute**).
+This application utilizes the Google Gemini and Materials Project APIs. Usage is subject to the respective service tier limits. The Gemini 3 Flash free tier currently allows **15 requests per minute**.
 
 ---
 
 ## Support and Contributions
 
 ### Reporting Issues
-If you encounter bugs, technical inconsistencies, or unexpected behavior, please open an issue in the **[GitHub Issue Tracker](https://github.com/8eon/Materials-Project-natural-lang-explorer/issues)**. Detailed bug reports with steps to reproduce the issue are highly appreciated.
+If you encounter bugs, technical inconsistencies, or unexpected behavior, please open an issue in the **[GitHub Issue Tracker](https://github.com/8eon/Materials-Project-natural-lang-explorer/issues)**.
 
 ### Contributions
 Contributions to the project are welcome. If you wish to propose new features, scientific modules (e.g., Elasticity, Piezoelectricity), or UI improvements:
