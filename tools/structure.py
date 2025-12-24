@@ -6,6 +6,7 @@ class Structure(MPBase):
     
     def get_structure_data(self, material_id: str) -> Dict[str, Any]:
         """Fetch raw crystal structure data for a specific material ID."""
-        data = self.mpr.structures.get_data_by_id(material_id)
+        self.record_call(f"Structure Data: {material_id}")
+        data = self.mpr.materials.get_data_by_id(material_id)
         return data.dict() if data else {"error": "No structure data found"}
 

@@ -1,10 +1,27 @@
 from config import config
 from tools import MPClient
 from llm.gemini_client import GeminiClient
+import time
 from rich.console import Console
 from rich.markdown import Markdown
+from rich.live import Live
+from rich.text import Text
 
 console = Console()
+
+def create_status_display(mp_client):
+    """Creates a clean, dynamic status line that switches between thinking and accessing."""
+    # If a tool was called recently (within last 2 seconds), show the access status
+    time_since_last_call = time.time() - mp_client.last_call_time
+    
+    if mp_client.call_count > 0 and time_since_last_call < 2.0:
+        return Text.assemble(
+            (f" 📂 Accessing {mp_client.current_action} ", "bold yellow"),
+            (f"({mp_client.call_count})", "dim cyan")
+        )
+    
+    # Default state is 'thinking'
+    return Text(" ⌛ Gemini is thinking...", style="italic cyan")
 
 def main():
     # 1. Setup Keys
@@ -25,7 +42,8 @@ def main():
             mp_client.get_thermo_data,
             mp_client.get_electronic_data,
             mp_client.get_structure_data,
-            mp_client.get_magnetic_data
+            mp_client.get_magnetic_data,
+            mp_client.get_surface_data
         ]
         
         gemini_client = GeminiClient(config.google_api_key, tools=tools)
@@ -43,8 +61,15 @@ def main():
             if user_input.lower() in ["exit", "quit"]:
                 break
             
-            with console.status("[italic]Gemini is thinking and searching...[/italic]"):
+            # Reset counters for the new turn
+            mp_client.call_count = 0
+            mp_client.current_action = "Analyzing Query"
+
+            with Live(create_status_display(mp_client), refresh_per_second=4) as live:
+                # The tool calls inside get_response will update the mp_client state
+                # and rich.Live will automatically refresh the display
                 response = gemini_client.get_response(user_input)
+                live.update(create_status_display(mp_client))
             
             console.print("\n[bold magenta]Gemini:[/bold magenta]")
             console.print(Markdown(response))

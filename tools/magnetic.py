@@ -6,6 +6,7 @@ class Magnetic(MPBase):
     
     def get_magnetic_data(self, material_id: str) -> Dict[str, Any]:
         """Fetch raw magnetic data for a specific material ID."""
+        self.record_call(f"Magnetic Data: {material_id}")
         data = self.mpr.magnetism.get_data_by_id(material_id)
         return data.dict() if data else {"error": "No magnetic data found"}
 

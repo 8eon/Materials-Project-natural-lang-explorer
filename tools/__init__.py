@@ -3,8 +3,9 @@ from .thermodynamics import Thermodynamics
 from .electronic import Electronic
 from .structure import Structure
 from .magnetic import Magnetic
+from .surfaces import Surfaces
 
-class MPClient(Discovery, Thermodynamics, Electronic, Structure, Magnetic):
+class MPClient(Discovery, Thermodynamics, Electronic, Structure, Magnetic, Surfaces):
     """
     Combined Materials Project Client.
     Inherits from granular feature modules for a clean, modular structure.

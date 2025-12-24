@@ -1,0 +1,5 @@
+mp-api
+google-generativeai
+rich
+python-dotenv
+

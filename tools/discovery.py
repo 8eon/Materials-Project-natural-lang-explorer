@@ -9,6 +9,7 @@ class Discovery(MPBase):
         Search for material IDs and formulas based on chemical criteria.
         Returns a minimal list of material_id and formula.
         """
+        self.record_call(f"Materials Search")
         docs = self.mpr.summary.search(
             elements=elements, 
             chemsys=chemsys, 
