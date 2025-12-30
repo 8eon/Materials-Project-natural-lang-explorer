@@ -85,7 +85,7 @@ lower calculated electronic bandgap.
 ──────────────────────────────────────────────────
 
 ```
-
+(some symbols/characters may be unable to correctly render in the terminal)
 ---
 
 ## Architectural Design
